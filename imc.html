@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>IMC!!!</title>
+    <script src='calculoImc.js'></script>
+</head>
+
+<body>
+    <form name="formulario" id="idFormulario" action="">
+        <!--enmarcamos el formulario-->
+        <fieldset>
+            <!--le damos un nombre al marco-->
+            <legend align="center">C&AacuteLCULO DEL IMC (&Iacutendice de Masa Corporal)</legend>
+            <p>Peso en kg.:
+                <!--definimos una caja donde introducir el dato del peso-->
+                <input type="text" name="peso" id="peso" size="3" maxlength="4">
+            </p>
+            <p>Altura en cm.:
+                <!--definimos una caja donde introducir el dato de la altura-->
+                <input type="text" name="altura" id="altura" size="3" maxlength="3">
+                <!--definimos un boton que hara la llamada a la funcion para calcular el imc-->
+                <input type="button" value="Calcular IMC" onClick="fImc()">
+            </p>
+            <p> RESULTADO DE TU IMC:
+                <!--definimos una caja donde la funcion devolvera el valor de imc calculado-->
+                <!-- los campos son solo de lectura -->
+                <input type="text" name="imc" id="imc" size="10" maxlength="15" readonly="readonly"> Leyenda:
+                <!--definimos una caja donde la funcion escribirá el comentario, definido en leyenda-->
+                <input type="text" name="leyenda" id="leyenda" size="42" readonly="readonly">
+            </p>
+        </fieldset>
+        <div>
+            <img id="imagenId">
+        </div>
+    </form>
+</body>
+
+</html>
