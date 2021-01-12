@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>GATITOS</title>
+    <script>
+        let imagenesGatosArray = ["bebe_gato.jpg", "gato_negro.jpg", "gato_tumbado.jpg"];
+        let i = 0;
+        let elemento;
+
+        elemento.style.width = "200px";
+        elemento.style.height = "200px";
+
+        function cargar_imagen() {
+            if ((imagenesGatosArray.length > 0) && (i < imagenesGatosArray.length)) {
+
+                // La propiedad textContent de la interfaz Node representa el contenido de texto 
+                // de un nodo y sus dencendientes. Cada vez que pulsamos el botón, le envía un número que
+                // nos va a servir para recorrer el array y mostrar todos los elementos.
+
+                document.getElementById("demo").textContent = i;
+
+                imagenesGatosArray[i].width = "200px";
+                imagenesGatosArray[i].height = "250px";
+
+
+                let html = "Gatitos: <img src='imagenes/" + imagenesGatosArray[i] + "' /img><br/>"
+
+                document.getElementById("myDiv").innerHTML += html;
+                i++;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <button onclick="cargar_imagen();">CARGAR IMAGEN</button>
+    <p id="demo"></p>
+</body>
+
+</html>
